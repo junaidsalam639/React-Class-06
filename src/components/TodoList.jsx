@@ -12,7 +12,10 @@ function TodoList (props){
         {
             prop.map((element , index , array) => {
                 console.log(element);
-               return <li>{element}</li>
+               return <li>{element}
+               <button>Edit</button>
+               <button>Delete</button>
+               </li>
             })
         }
        </ul>
