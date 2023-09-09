@@ -21,7 +21,7 @@ function App() {
   const [update , setUpdate] = useState([]);
   const todo = (e) => {
      console.log(e);
-     setUpdate(e)
+     setUpdate([...update , e])
   }
   return (
     <div className="App">
