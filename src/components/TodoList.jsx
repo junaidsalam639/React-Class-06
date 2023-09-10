@@ -1,26 +1,33 @@
-import React from "react";
+import { Button } from 'bootstrap';
+import React from 'react'
 
-function TodoList (props){
-   const {
-    list
-   } = props
-   let prop = props.list;
-  console.log(prop);
-    return(
-        <>
-       <ul>
-        {
-            prop.map((element , index , array) => {
+const TodoList = (props) => {
+    const {
+        todoList
+    } = props
+    console.log(todoList);
+
+    const edit = (e) => {
+        console.log(e);
+    }
+    const dele = (e) => {
+        console.log(e);
+    }
+  return (
+    <div>
+      <ul>
+          {
+            todoList.map((element , index , array) => {
                 console.log(element);
-               return <li>{element}
-               <button>Edit</button>
-               <button>Delete</button>
-               </li>
+                return <li style={{textTransform : 'capitalize'}}>{element}
+                <button onClick={() => edit(index)}>Edit</button>    
+                <button onClick={() => dele(index)}>Delete</button>    
+                </li>
             })
-        }
-       </ul>
-        </>
-    )
+          }
+      </ul>
+    </div>
+  )
 }
 
 export default TodoList

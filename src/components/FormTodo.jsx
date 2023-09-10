@@ -1,24 +1,26 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-function FormTodo (props){
+const FormTodo = (props) => {
     const {
-        PropTodo
+        updateTodo
     } = props
-    const [inputValue , setInputValue] = useState('');
+    let [inputValue , setInputValue] = useState('');
+
     const submit = (e) => {
         e.preventDefault()
-        console.log('submit' , inputValue);
-        PropTodo(inputValue)
+        updateTodo(inputValue);
+        setInputValue('')
     }
-
-    return(
-        <>
-        <form action="submit" onSubmit={submit}>
-        <input type="text" value={inputValue} required onChange={(e) => setInputValue(e.target.value)} />
+  return (
+    <div className='App'>
+      <form action="submit" onSubmit={submit}>
+        <input type="text" required value={inputValue} onChange={(e) => setInputValue(e.target.value)}
+        style={{textTransform : 'capitalize'}} />
         <input type="submit" />
-        </form>
-        </>
-    )
+      </form>
+    </div>
+  )
 }
 
 export default FormTodo
+
