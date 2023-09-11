@@ -1,9 +1,13 @@
 import React , {useState} from 'react'
 import { db , collection , addDoc } from './Config/Firebase';
 
+const style = {
+  backgroundColor : '#61dafb'
+}
+
 const Practice = () => {
     const [change , setChange] = useState('');
-    const [toogle , setToogle] = useState(true)
+    const [toogle , setToogle] = useState(true);
     const [email , setEmail] = useState('');
     const [password , setPassword] = useState('');
     const [select , setSelect] = useState('');
@@ -44,7 +48,7 @@ const Practice = () => {
 
       {/* Ternary Operator in es6 */}
         {
-          toogle ? <h1>hello</h1> : null
+          toogle ? <h1 style={style}>hello</h1> : null
         }
         {/* Phela Tarika Toogle krne la */}
         {/* <button onClick={() => setToogle(true)}> show</button>
