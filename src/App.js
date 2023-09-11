@@ -26,6 +26,8 @@ function App() {
      setUpdate([...update , e])
   }
   return (
+    <>
+    
     <div className="App">
       <Practice />
        <h1>Count</h1>
@@ -37,6 +39,7 @@ function App() {
       todoList = {update}  />
       <Card apiData = {dataFech}/>
     </div>
+      </>
   );
 }
 
