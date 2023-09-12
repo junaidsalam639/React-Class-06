@@ -1,10 +1,6 @@
 import React , {useState} from 'react'
 import { db , collection , addDoc } from './Config/Firebase';
 
-const style = {
-  backgroundColor : '#61dafb'
-}
-
 const Practice = () => {
     const [change , setChange] = useState('');
     const [toogle , setToogle] = useState(true);
@@ -12,6 +8,11 @@ const Practice = () => {
     const [password , setPassword] = useState('');
     const [select , setSelect] = useState('');
     const [check , setCheck] = useState(false);
+
+    const color = () => {
+      document.querySelector('.heading').classList.toggle('head')
+    }
+    
     const submit = async(e) => {
          e.preventDefault();
          console.log(email , password , select , check);
@@ -48,13 +49,14 @@ const Practice = () => {
 
       {/* Ternary Operator in es6 */}
         {
-          toogle ? <h1 style={style}>hello</h1> : null
+          toogle ? <h1 className="heading">hello</h1> : null
         }
         {/* Phela Tarika Toogle krne la */}
         {/* <button onClick={() => setToogle(true)}> show</button>
         <button onClick={() => setToogle(false)}>Hide</button> */}
         {/* Dosra Tarika Toogle krne ka */}
         <button onClick={() => setToogle(!toogle)}>Toogle</button>
+        <button onClick={color}>Color</button>
 
     </div>
   )

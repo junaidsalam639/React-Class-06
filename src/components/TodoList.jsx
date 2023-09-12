@@ -13,13 +13,14 @@ const TodoList = (props) => {
     const dele = (e) => {
         console.log(e);
     }
+
   return (
     <div>
       <ul>
           {
             todoList.map((element , index , array) => {
                 console.log(element);
-                return <li style={{textTransform : 'capitalize'}}>{element}
+                return <li key={index} style={{textTransform : 'capitalize'}}>{element}
                 <button onClick={() => edit(index)}>Edit</button>    
                 <button onClick={() => dele(index)}>Delete</button>    
                 </li>

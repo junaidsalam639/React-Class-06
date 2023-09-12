@@ -13,6 +13,7 @@ const FormTodo = (props) => {
     }
   return (
     <div className='App'>
+      <h1>Todo_App</h1>
       <form action="submit" onSubmit={submit}>
         <input type="text" required value={inputValue} onChange={(e) => setInputValue(e.target.value)}
         style={{textTransform : 'capitalize'}} />
