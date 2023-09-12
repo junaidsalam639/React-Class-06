@@ -51,7 +51,20 @@ const Es6_Practice = () => {
         console.log(prom);
         console.log('Hello!');
     }
-    ayncFun()
+    ayncFun();
+
+    // Es6 Prototypes || Constructor
+    function Plan(first, last, age, eyecolor) {
+        this.firstName = first;
+            this.lastName = last;
+            this.Age = age;
+            this.eyeColor = eyecolor;
+    }
+    const myFather = new Plan("John", "Doe", 50, "blue");
+    const myMother = new Plan("Sally", "Rally", 48, "green");
+    console.log(myFather);
+    console.log(myMother);
+
 
     return (
         <div>
@@ -62,7 +75,7 @@ const Es6_Practice = () => {
             {
                 data.map((element, index, array) => {
                     console.log(element);
-                  return  <section className="articles" key={element.id}>
+                    return <section className="articles" key={element.id}>
                         <article>
                             <div className="article-wrapper">
                                 <figure>
