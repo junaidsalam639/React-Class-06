@@ -60,17 +60,17 @@ const Es6_Practice = () => {
             <input type="number" value={num1} onChange={(e) => setNum1(e.target.value)} /> <br /><br />
             <button onClick={num_submit}>submit</button>
 
-            <div class="container mx-auto mt-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card" style={{width : '18rem'}}>
-                            <img src="https://i.imgur.com/ZTkt4I5.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn mr-2"><i class="fas fa-link"></i> Visit Site</a>
-                                <a href="#" class="btn "><i class="fab fa-github"></i> Github</a>
+            <div className="container mx-auto mt-4">
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="card1" style={{width : '18rem'}}>
+                            <img src="https://i.imgur.com/ZTkt4I5.jpg" className="card-img-top" alt="..." width={250} />
+                            <div className="card-body">
+                                <h5 className="card-title">Card title</h5>
+                                <h6 className="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" className="btn1 mr-2"><i className="fas fa-link"></i> Visit Site</a>
+                                <a href="#" className="btn1 "><i className="fab fa-github"></i> Github</a>
                             </div>
                         </div>
                     </div>
