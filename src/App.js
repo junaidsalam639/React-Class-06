@@ -8,7 +8,9 @@ import Practice from './components/Practice';
 
 function App() {
   const [dataFech , setDataFech] = useState(ApiDataFecth);
-  const [count , setCount] = useState(0)
+  const [count , setCount] = useState(0);
+  const [num , setNum] = useState(0);
+  const [num1 , setNum1] = useState(0);
   useEffect(()=> {
     console.log('WITH OUT DEPENDENCY');
   }); //JB BHI MERA DOM RUN HOGA TO YE CHALEGA
@@ -25,10 +27,42 @@ function App() {
   const todo = (e) => {
      setUpdate([...update , e])
   }
+
+  function num_submit () {
+    let promise = new Promise ((resolve , reject) => {
+      if(num < num1){
+        resolve('resolve')
+      }else{
+        reject('reject')
+      }
+    })
+    promise.then((right) => {
+      console.log(right);
+    }).catch((e) => {
+      console.log(e);
+  })
+}
+
+function abc (e , call) {
+  console.log(e)
+  call(20)
+}
+
+function gef(e){
+  console.log('I am callback function' , e);
+}
+
+abc(10 , gef)
+
+
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png
   return (
     <>
     
     <div className="App">
+      <input type="number" value={num} onChange={(e) => setNum(e.target.value)}  />
+      <input type="number" value={num1} onChange={(e) => setNum1(e.target.value)}  />
+      <button onClick={num_submit}>submit</button>
       <Practice />
        <h1>Count</h1>
       <p>{count}</p>
