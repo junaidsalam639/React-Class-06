@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 const Es6_Practice = () => {
-    const [num, setNum] = useState(0);
-    const [num1, setNum1] = useState(0);
+    const [num, setNum] = useState('');
+    const [num1, setNum1] = useState('');
     const [data, setData] = useState([]);
     // Es6 Promises
     function num_submit() {
@@ -68,8 +68,8 @@ const Es6_Practice = () => {
 
     return (
         <div>
-            <input type="number" value={num} onChange={(e) => setNum(e.target.value)} /> <br /><br />
-            <input type="number" value={num1} onChange={(e) => setNum1(e.target.value)} /> <br /><br />
+            <input type="number" value={num} onChange={(e) => setNum(e.target.value)} placeholder='enter your Num' /> <br /><br />
+            <input type="number" value={num1} onChange={(e) => setNum1(e.target.value)} placeholder='enter your Num' /> <br /><br />
             <button onClick={num_submit}>submit</button>
 
             {
