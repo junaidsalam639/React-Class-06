@@ -11,6 +11,8 @@ import {
 } from "react-router-dom";
 
 import FormTodo from './components/FormTodo';
+import Practice from './components/Practice';
+import Es6_Practice from './components/Es6_Practice/Es6_Practice';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: '/formtodo',
     element: <FormTodo/>
+  },
+  {
+    path: '/practice',
+    element: <Practice/>
+  },
+  {
+    path: '/Es6_Practice',
+    element: <Es6_Practice/>
   },
 
 ])

@@ -31,7 +31,7 @@ const Practice = () => {
             }
             
             return (
-                <div>
+                <div className='App'>
       <h1>{change}</h1>
       <input type="text" onChange={(e) => setChange(e.target.value) } placeholder='Type Your Text' />
       <form onSubmit={submit}>

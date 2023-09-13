@@ -7,6 +7,7 @@ import Card from './components/Card';
 import Practice from './components/Practice';
 import Es6_Practice from './components/Es6_Practice/Es6_Practice';
 import Hooks_Practice from './components/Es6_Practice/Hooks_Practice';
+import {useNavigate} from 'react-router-dom';
 
 function App() {
   const [dataFech , setDataFech] = useState(ApiDataFecth);
@@ -36,16 +37,13 @@ function App() {
     setHooksPractice(e);
   }
 
-
+  const navigate = useNavigate()
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png
   return (
     <>
     <div className="App">
-      <Es6_Practice /> <hr />
-      <Practice /> <hr />
-       <h1>Count</h1>
-      <p>{count}</p>
-      <button onClick={() => setCount(count + 1)}>Count</button> <br /><br /> <hr />
+    <button onClick={() => navigate('/Es6_Practice')}>Api_Data_Fecth</button> <hr />
+      <button onClick={() => navigate('/practice')}>Form_Data</button> <hr />
       <h1>Function {hookPractice} </h1>
       <h1>Hooks {hookPractice}</h1>
       <Hooks_Practice 

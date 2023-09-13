@@ -65,9 +65,16 @@ const Es6_Practice = () => {
     console.log(myFather);
     console.log(myMother);
 
+    const style = {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-around",
+        alignItems: "center",
+    }
 
     return (
-        <div>
+        <div className='App'>
+            <h1>Api_Data_Fecth</h1>
             <input type="number" value={num} onChange={(e) => setNum(e.target.value)} placeholder='enter your Num' /> <br /><br />
             <input type="number" value={num1} onChange={(e) => setNum1(e.target.value)} placeholder='enter your Num' /> <br /><br />
             <button onClick={num_submit}>submit</button>
@@ -75,7 +82,7 @@ const Es6_Practice = () => {
             {
                 data.map((element, index, array) => {
                     console.log(element);
-                    return <section className="articles" key={element.id}>
+                    return <section className="articles" key={element.id} style={style}>
                         <article>
                             <div className="article-wrapper">
                                 <figure>
